@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Adhoc]">
+  <listeners>
+    <listener class-name="account.gmail.com.ScreenshotListener"/>
+  </listeners>
+  <test thread-count="5" name="Chrome_Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.google.com"/>
+    <classes>
+      <class name="run.Execute">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="homePageTest"/>
+          <include name="verifyHomepagetitle"/>
+          <include name="gmailinfo"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- run.Execute -->
+    </classes>
+  </test> <!-- Chrome_Test(failed) -->
+</suite> <!-- Failed suite [Adhoc] -->
